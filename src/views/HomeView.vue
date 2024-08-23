@@ -17,5 +17,5 @@ const { socket, send, on, off } = useSocket(`ws://127.0.0.1:9999/api/v1/ws`, {
 </script>
 
 <template>
-  <main>aaa</main>
+  <div></div>
 </template>
