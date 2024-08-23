@@ -1,19 +1,18 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+
+import { createMemoryHistory, createRouter } from 'vue-router'
+
 import HomeView from '../views/HomeView.vue'
 
-Vue.use(VueRouter)
 
-const router = new VueRouter({
-  mode: 'history',
-  base: import.meta.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    }
-  ]
+
+const routes = [
+  { path: '/', component: HomeView },
+]
+
+const router = createRouter({
+  history: createMemoryHistory(),
+  routes: routes
 })
 
 export default router
+
